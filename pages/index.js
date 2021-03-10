@@ -83,7 +83,7 @@ export default function Home() {
               <h3>Lol my discord auth thing idk</h3>
               <div style={{ marginTop: '8px'}}>
               <Button
-                href={`https://localhost:3001/auth/discord/login`}
+                href={`http://localhost:3001/auth/discord/login`}
                 icon={<SiDiscord style={{ marginRight: '8px'}} />}
                 type="primary"
                 block
