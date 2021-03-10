@@ -1,65 +1,104 @@
 import Head from 'next/head'
+import Particles from 'react-particles-js'
+import { Button } from 'antd';
+import { SiDiscord } from 'react-icons/si';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Discord auth</title>
+        <meta name="og:title" content="Discord auth"/>
+        <meta name="theme-color" content="#39e66a" />
       </Head>
-
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Particles
+                    params={{
+                        'backgroundMode': {
+                            'enable': true,
+                        },
+                        'particles': {
+                            'color': {
+                                'value': '#ffffff',
+                            },
+                            'links': {
+                                'color': {
+                                    'value': '#ffffff',
+                                },
+                                'distance': 150,
+                                'enable': true,
+                                'opacity': 0.4,
+                            },
+                            'move': {
+                                'attract': {
+                                    'rotate': {
+                                        'x': 600,
+                                        'y': 1200,
+                                    },
+                                },
+                                'enable': true,
+                            },
+                            'number': {
+                                'density': {
+                                    'enable': true,
+                                },
+                                'value': 60,
+                            },
+                            'opacity': {
+                                'value': 0.5,
+                                'animation': {
+                                    'minimumValue': 0.1,
+                                    'speed': 1,
+                                },
+                            },
+                            'shadow': {
+                                'blur': 5,
+                                'enable': true,
+                                'offset': {
+                                    'x': 3,
+                                    'y': 3,
+                                },
+                            },
+                            'size': {
+                                'value': 3,
+                                'animation': {
+                                    'minimumValue': 0.1,
+                                    'speed': 40,
+                                },
+                            },
+                            'stroke': {
+                                'color': {
+                                    'value': '#000000',
+                                    'animation': {
+                                        'enable': false,
+                                        'speed': 1,
+                                        'sync': true,
+                                    },
+                                },
+                            },
+                        },
+              }} />
+              <h2>Discord auth</h2>
+              <h3>Lol my discord auth thing idk</h3>
+              <div style={{ marginTop: '8px'}}>
+              <Button
+                href={`https://localhost:3001/auth/discord/login`}
+                icon={<SiDiscord style={{ marginRight: '8px'}} />}
+                type="primary"
+                block
+                size="large"
+                style={{
+                  marginTop: '10px',
+                  marginTop: '-35px',
+                  backgroundColor: '#7289DA',
+                  border: 'none',
+                }}
+              >
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+                Login with Discord 
+              </Button>
+          </main>
+      </div>
+  );
 }
