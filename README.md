@@ -12,13 +12,13 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-> Note: Make sure you replace the CLIENT_SECRET, and CLIENT_ID to your applications ones.
+> Note: Make sure you create a .env file at the root of the repository and add your clientid and client secret.
 
 Also, make sure the API is running on port 3001 as the frontend is sending requests to the API running on localhost:3001 you can do this via:
 
-```
+```bash
 cd api
 ```
-```
+```bash
 node index.js
 ```
