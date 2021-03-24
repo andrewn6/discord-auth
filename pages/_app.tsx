@@ -1,5 +1,6 @@
 import Loading from '../components/Loading';
-import API from '../api'
+import { useState } from 'react';
+
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);

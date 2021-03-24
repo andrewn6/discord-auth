@@ -90,7 +90,6 @@ export default function Home() {
                 size="large"
                 style={{
                   marginTop: '10px',
-                  marginTop: '-35px',
                   backgroundColor: '#7289DA',
                   border: 'none',
                 }}
@@ -98,6 +97,7 @@ export default function Home() {
 
                 Login with Discord 
               </Button>
+            </div>
           </main>
       </div>
   );
